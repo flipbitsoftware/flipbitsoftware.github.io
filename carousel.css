@@ -20,6 +20,16 @@ body {
     text-align: center;
 }
 
+.centered {
+    text-align: center;
+}
+
+.med-heading {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 .legal-heading {
     margin: 80px;
     text-align: center;
