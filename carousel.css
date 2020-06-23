@@ -8,6 +8,12 @@ body {
   color: #5a5a5a;
 }
 
+#backgroundVideo {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .legal-body {
     max-width: 1280px;
     margin-right: auto;
