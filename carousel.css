@@ -14,6 +14,7 @@ body {
   min-height: 100%;
 }
 
+
 .legal-body {
     max-width: 1280px;
     margin-right: auto;
@@ -70,6 +71,13 @@ body {
     width: 100%;
     text-align: center;
 }
+
+#b2b-goals > li:before { content: '\1F449'; margin-left: -20px; margin-right: 10px; }
+#b2b-goals > li { margin-left: 20px; margin-bottom: 10px; }
+
+#b2b-achievements > li:before { content: '\1F44D'; margin-left: -20px; margin-right: 10px; }
+#b2b-achievements > li { margin-left: 20px; margin-bottom: 10px; }
+
 
 #contacts {
     display: flex;
