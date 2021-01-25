@@ -38,14 +38,9 @@ $(document).ready(function () {
             processData: false,
             crossDomain:true,
             method: "POST",
-            data: vals,
-            success: function(data) {
-                alert("Thank you!");
-            },
-            error: function(error) {
-                console.log(error);
-                alert("Error happened! Please, contact us to hello@fliptbitsoftware.com");
-            }
+            data: vals
+        }).done(function() {
+          alert("Thank you!");
         });
 
         return false; // prevent from submit
