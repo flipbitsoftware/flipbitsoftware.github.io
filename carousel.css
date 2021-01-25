@@ -32,24 +32,40 @@ body {
 }
 
 .med-heading {
-    margin-top: 80px;
     margin-bottom: 40px;
-    text-align: center;
 }
 
 .legal-heading {
-    margin: 80px;
+    margin: 60px;
+    text-align: center;
+}
+
+.legal-heading2 {
+    margin: 40px;
+    text-align: center;
+}
+
+.incenter {
     text-align: center;
 }
 
 .contacts-phone {
-    margin-top: 80px;
     text-align: center;
 }
 
 .contacts-address {
     margin-top: 10px;
     text-align: center;
+}
+
+.contacts-question {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-problems-img {
+border-radius: 50% !important;
 }
 
 .legal-date {
@@ -79,16 +95,10 @@ body {
 #b2b-achievements > li { margin-left: 20px; margin-bottom: 10px; }
 
 
-#contacts {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    max-width: 850px;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
-}
-#contacts li {
+#email-link {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
     border: 2px solid transparent;
     box-shadow: inset 0 0 1px var(--DEPRECATED-gray-4);
     margin-bottom: 32px;
@@ -99,7 +109,7 @@ body {
     width: calc(33.33333%);
 }
 
-#contacts li img {
+#email-link img {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -107,21 +117,17 @@ body {
     width: 48px;
 }
 
-#contacts li h5 {
+#email-link h5 {
     margin: 1em 0;
 }
 
-#contacts li p {
-    align-self: stretch;
-    margin: 0;
-}
-
-#contacts li a {
+#email-link a {
     color: var(--black);
     background-color: transparent;
     text-decoration: none;
     text-decoration-color: rgb(0, 0, 0);
 }
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -170,7 +176,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  margin: 3rem 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -199,6 +205,6 @@ body {
 
 @media (min-width: 62em) {
   .featurette-heading {
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 }

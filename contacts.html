@@ -27,6 +27,10 @@ user-select: none;
         </style>
         <!-- Custom styles for this template -->
         <link href="carousel.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/form-validation.js"></script>
+        
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170630444-1"></script>
         <script>
@@ -61,11 +65,11 @@ user-select: none;
                     </ul>
                     <form class="form-inline mt-2 mt-md-0">
                         <div class="">
-                            <a href="https://www.linkedin.com/company/flipbitsoftware/" class="navbar-social" target="_blank" title="">
-                                <img src="images/linkedin.png" width="30" height="30" />
+                            <a href="contacts.html" class="navbar-social" target="_blank" title="">
+                                <img src="images/email.png" width="30" height="30" />
                             </a>
-                            <a href="https://www.facebook.com/flipbitsoftware/" class="navbar-social" target="_blank" title="">
-                                <img src="images/facebook.png" width="30" height="30" />
+                            <a href="https://www.linkedin.com/company/flipbit-software/" class="navbar-social" target="_blank" title="">
+                                <img src="images/linkedin.png" width="30" height="30" />
                             </a>
                             <a href="https://twitter.com/flipbitsoftware" class="navbar-social" target="_blank" title="">
                                 <img src="images/twitter.png" width="30" height="30" />
@@ -80,39 +84,22 @@ user-select: none;
             <div class="container">
                 <!-- START THE FEATURETTES -->
 
-                <h1 class="legal-heading">How can we help you?</h1>
+                <h1 class="legal-heading">Contact us</h1>
 
                 <hr class="featurette-divider">
                 
-                <p class="lead legal-heading">Choose a category below so we can get back to you as soon as possible.</p>
-        
-                <ul id="contacts" class="g-container">
-                    <li>
-                        <a href="#" type="button" class="btn" data-toggle="modal" data-target="#contactus" data-whatever="@general">
-                            <img src="https://www.datocms-assets.com/2885/1508349541-contact-icon.svg" alt="General Inquiry">
-                            <h5>General Inquiry</h5>
-                            <p>I have a general question or inquiry.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" type="button" class="btn" data-toggle="modal" data-target="#contactus" data-whatever="@sales">
-                            <img src="https://www.datocms-assets.com/2885/1508349541-contact-icon.svg" alt="Sales">
-                            <h5>Sales</h5>
-                            <p>I'd like information about products and purchasing.</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" type="button" class="btn" data-toggle="modal" data-target="#contactus" data-whatever="@support">
-                            <img src="https://www.datocms-assets.com/2885/1508349427-support-icon.svg" alt="Product Support">
-                            <h5>Product Support</h5>
-                            <p>I'm an enterprise customer and need help.</p>
-                        </a>
-                    </li>
-                </ul>
-
-                <p class="lead contacts-phone"><b>Mainline: </b>+1 (650) 880 1400</p>
+                <p class="lead contacts-question"><b>Do you need a free consultation in high loaded systems? Do you want to discuss a potential project?</b></p>
                 
-                <p class="lead contacts-address"><b>Address:</b> 4801 Lang Ave NE Suite 110 PMB 3002, Albuquerque, NM 87109</p>
+                <div id="email-link" class="legal-heading">
+                    <a href="#" type="button" class="btn" data-toggle="modal" data-target="#contactus" data-whatever="@general">
+                        <img src="https://www.datocms-assets.com/2885/1508349541-contact-icon.svg" alt="General Inquiry">
+                        <h5>Drop a message</h5>
+                    </a>
+                </div>
+
+                <p class="lead contacts-phone"><b>Call us: </b>+1 (650) 880 1400</p>
+                
+                <p class="lead contacts-address"><b>Our main office at:</b> 4801 Lang Ave NE Suite 110 PMB 3002, Albuquerque, NM 87109</p>
         
                 <div class="modal" id="contactus" tabindex="-1" role="dialog" aria-labelledby="contactusLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -123,28 +110,28 @@ user-select: none;
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                <p>Please let us know how can we help by filling up the form below.</p>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="fullname" class="col-form-label">Your fullname:</label>
-                                        <input type="text" class="form-control" id="fullname">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="contactee-email" class="col-form-label">Your email:</label>
-                                        <input type="text" class="form-control" id="contactee-email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">Message:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
-                                        <!-- <input class="text long-field" id="summary" name="summary" type="text" value=""> -->
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary submit-button">Submit</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
+                            <form id="sendemail" action="" method="POST">
+                                <div class="modal-body">
+                                    <p>Please let us know how can we help by filling up the form below.</p>
+                                        <div class="form-group">
+                                            <label for="fullname" class="col-form-label">Your fullname:</label>
+                                            <input type="text" class="form-control" name="fullname" id="fullname">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contactemail" class="col-form-label">Your email:</label>
+                                            <input type="text" class="form-control" name="contactemail" id="contactemail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="messagetext" class="col-form-label">Message:</label>
+                                            <textarea class="form-control" name="messagetext"  id="messagetext"></textarea>
+                                            <!-- <input class="text long-field" id="summary" name="summary" type="text" value=""> -->
+                                        </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" id="formsubmit" class="btn btn-primary submit-button">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -189,7 +176,7 @@ user-select: none;
                 </div>
             </footer>
         </main>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
         <script src="js/bootstrap.bundle.js"></script>
         <script>
             $('#contactus').on('show.bs.modal', function (event) {
