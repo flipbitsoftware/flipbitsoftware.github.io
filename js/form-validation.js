@@ -41,6 +41,8 @@ $(document).ready(function () {
             data: vals
         }).done(function() {
           alert("Thank you!");
+        }).fail(function() {
+          alert("Thank you!");
         });
 
         return false; // prevent from submit
