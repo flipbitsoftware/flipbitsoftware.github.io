@@ -36,6 +36,7 @@ $(document).ready(function () {
             url: "https://tpopyh9im4.execute-api.us-east-1.amazonaws.com/Prod/send-email",
             contentType: false,
             processData: false,
+            crossDomain:true,
             method: "POST",
             data: vals,
             success: function(data) {
