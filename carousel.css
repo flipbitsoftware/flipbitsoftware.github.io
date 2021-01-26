@@ -68,6 +68,11 @@ body {
 border-radius: 50% !important;
 }
 
+.rounded-circle-border {
+border: 1px;
+border-style: solid;
+}
+
 .legal-date {
     margin: 10px;
     text-align: center;
