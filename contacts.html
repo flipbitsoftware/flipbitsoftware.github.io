@@ -126,6 +126,7 @@ user-select: none;
                                             <textarea class="form-control" name="messagetext"  id="messagetext"></textarea>
                                             <!-- <input class="text long-field" id="summary" name="summary" type="text" value=""> -->
                                         </div>
+                                        <div class="g-recaptcha" data-sitekey="6LfgpjwaAAAAAHJq-jcbHaOIDdhQGavieiRJVCeQ"></div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="submit" id="formsubmit" class="btn btn-primary submit-button">Submit</button>
@@ -188,5 +189,8 @@ user-select: none;
               modal.find('.modal-title').text('New message to ' + recipient);
             })
         </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
     </body>
 </html>
